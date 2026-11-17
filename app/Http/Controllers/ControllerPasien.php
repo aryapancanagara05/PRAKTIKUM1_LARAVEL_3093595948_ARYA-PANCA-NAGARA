@@ -7,6 +7,7 @@ use Illuminate\Auth\Events\Login;
 use Illuminate\Container\Attributes\Auth as AttributesAuth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class ControllerPasien extends Controller
 {
@@ -32,5 +33,13 @@ class ControllerPasien extends Controller
         }else{
             redirect('')->with('pesan','login gagal');
         }
+    }
+
+    public function baru(Request $request){
+        $request->validate([
+
+        ]);
+        tb_pasien::create($request->all());
+        Redirect('register')->with('login berhasil');
     }
 }

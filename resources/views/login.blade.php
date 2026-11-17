@@ -115,9 +115,9 @@
         <p>Portal Layanan Obat & Pasien</p>
       </div>
 
-      <div class="alert-box">
-        <span>Pesan status login sistem ditampilkan di sini</span>
-      </div>
+        <div class="alert-box">
+          <span>Pesan status login sistem ditampilkan di sini</span>
+        </div>
 
       <form action="" method="POST">
       @csrf
