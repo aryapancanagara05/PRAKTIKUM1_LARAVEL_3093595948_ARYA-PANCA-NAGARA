@@ -19,6 +19,7 @@ class ControllerPasien extends Controller
         return view('register');
     }
 
+    
     public function login(Request $request){
         $request->validate([
             'email'=>'required',
